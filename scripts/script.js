@@ -1,6 +1,6 @@
 function generateRandomNumber(num)
 {
-    return Math.floor(Math.random()*num);
+    return Math.floor(Math.random() * 3) + 1;
 }
 
 function computerPlay()
@@ -8,11 +8,11 @@ function computerPlay()
     var num = generateRandomNumber(2);
     switch(num)
     {
-        case 0 :
-            return "rock";
         case 1 :
-            return "paper";
+            return "rock";
         case 2 :
+            return "paper";
+        case 3 :
             return "scissors";
     }
 }
@@ -74,24 +74,24 @@ function game()
         if(decide == 1)
         {
             userscore++;
-            playerSelection = prompt("You win !! " + playerSelection.toUpperCase()+ " beats " + computerSelection.toUpperCase() +"\nCOMPUTER = " +computerscore + " USER = " + userscore+ "\nEnter your choice for the "+ (i+1) +"th  round");
+            playerSelection = prompt("You win !! " + playerSelection.toUpperCase()+ " beats " + computerSelection.toUpperCase() +"\nCOMPUTER = " +computerscore + " USER = " + userscore+ "\nEnter your choice for round "+(i+1));
             playerSelection.toLowerCase();
             while(!checkvalue(playerSelection))
             {
                 alert("please enter a valid choice");
-                playerSelection = prompt("You win !! " + playerSelection.toUpperCase()+ " beats " + computerSelection.toUpperCase() +"\nCOMPUTER = " +computerscore + " USER = " + userscore+ "\nEnter your choice for the "+ (i+1) +"th  round");
+                playerSelection = prompt("COMPUTER = " +computerscore + " USER = " + userscore+ "\nEnter your choice for round "+(i+1));
                 playerSelection.toLowerCase();        
             }
             computerSelection  = computerPlay();
         }
         else if(decide == 0)
         {
-            playerSelection = prompt("Its a tie !! "+"\nCOMPUTER = " +computerscore + "USER = " + userscore+ "\nEnter your choice for the "+ (i+1) +"th  round");
+            playerSelection = prompt("Its a tie !! "+"\nCOMPUTER = " +computerscore + "USER = " + userscore+ "\nEnter your choice for round "+(i+1));
             playerSelection.toLowerCase();
             while(!checkvalue(playerSelection))
             {
                 alert("please enter a valid choice");
-                playerSelection = prompt("Its a tie !! "+"\nCOMPUTER = " +computerscore + "USER = " + userscore+ "\nEnter your choice for the "+ (i+1) +"th  round");
+                playerSelection = prompt("COMPUTER = " +computerscore + "USER = " + userscore+ "\nEnter your choice for round "+(i+1));
                 playerSelection.toLowerCase();        
             }
             computerSelection  = computerPlay();
@@ -99,12 +99,12 @@ function game()
         else
         {
             computerscore++;
-            playerSelection = prompt("You lose !! " + computerSelection.toUpperCase()+ " beats " + playerSelection.toUpperCase() +"\nCOMPUTER = " +computerscore + " USER = " + userscore+ "\nEnter your choice for the "+ (i+1) +"th  round");
+            playerSelection = prompt("You lose !! " + computerSelection.toUpperCase()+ " beats " + playerSelection.toUpperCase() +"\nCOMPUTER = " +computerscore + " USER = " + userscore+ "\nEnter your choice for round "+(i+1));
             playerSelection.toLowerCase();
             while(!checkvalue(playerSelection))
             {
                 alert("please enter a valid choice");
-                playerSelection = prompt("You lose !! " + computerSelection.toUpperCase()+ " beats " + playerSelection.toUpperCase() +"\nCOMPUTER = " +computerscore + " USER = " + userscore+ "\nEnter your choice for the "+ (i+1) +"th  round");
+                playerSelection = prompt("COMPUTER = " +computerscore + " USER = " + userscore+ "\nEnter your choice for round "+(i+1));
                 playerSelection.toLowerCase();        
             }
             computerSelection = computerPlay();
@@ -125,4 +125,4 @@ function game()
 
 
 alert("Welcome to my Game");
-game();
+document.onload = game();
