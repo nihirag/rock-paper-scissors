@@ -3,9 +3,29 @@
     <head>
         <title>Rock Paper Scissors !!</title>
         <meta charset="utf-8">
+        <link rel="stylesheet" href="styles/reset.css">
+        <link rel="stylesheet" href="styles/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet"> 
     </head>
     <body>
-        
+        <div class="container">
+            <div class="heading">
+                <h1>Rock Paper Scissors</h1>
+                <img src="images/noun_hands_147857.png" alt="rock-paper-scissors">
+            </div>
+            <div class="scoreboard">
+                <h3>User</h3>
+                <h3>Computer</h3>
+                <div class="score" id="user">4</div>
+                <div class="score" id = "computer">5</div>
+            </div>
+            <div class="buttons">
+                <button><img src="images/hand-rock-regular.svg" alt="rock"></button>
+                <button><img src="images/hand-paper-regular.svg" alt="paper"></button>
+                <button><img src="images/hand-scissors-regular.svg" alt="scissors"></button>
+            </div>
+        </div>
     </body>
     <script src = "scripts/script.js"></script>
 </html>
