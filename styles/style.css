@@ -94,52 +94,96 @@ button:hover
     background-color: #c81d1de0;
 }
 
-@media (max-width:785px)
+
+
+
+
+/* media queries */
+
+
+@media (max-width:796px)
 {
+    .heading
+    {
+        font-size: 4.5rem;
+    }
+    [alt = "rock-paper-scissors"]
+    {
+        width: 5.5rem;
+    }   
+}
+
+
+@media (max-width:690px)
+{
+    .container
+    {
+        margin-top:80px;
+    }
     .heading
     {
         font-size: 4rem;
     }
     [alt = "rock-paper-scissors"]
-{
-    margin-left: 20px;
-    width:5rem;
+    {
+        width: 5rem;
+    }   
+    button
+    {
+        padding: 10px 0px;
+    }
+    button>img
+    {
+        width:25px;
+    }
 }
-}
-@media (max-width:675px)
+
+
+@media (max-width:611px)
 {
     .heading
     {
         font-size: 3.5rem;
     }
     [alt = "rock-paper-scissors"]
-{
-    margin-left: 10px;
-    width:5rem;
+    {
+        width: 4.5rem;
+    }   
+    .roundResult > p
+    {
+        font-size:1.3rem;
+    }
 }
-}
-@media (max-width:565px)
+
+@media (max-width:572px)
 {
     .heading
     {
-        font-size: 2rem;
-    }
-    .scoreboard
-    {
-        font-size: 0.8rem;
+        font-size: 3rem;
+        flex-wrap: nowrap; 
     }
     [alt = "rock-paper-scissors"]
-{
-    margin-left: 10px;
-    width:3.5rem;
+    {
+        width: 4rem;
+    }  
 }
-.buttons
+
+@media (max-width:540px)
 {
-    margin: 0px 20px;
-}
-button >img
-{
-    vertical-align: middle;
-    width: 20px;
-}
+    .heading
+    {
+        font-size: 2.5rem;
+        display: block;
+        text-align: center;
+    }
+    [alt = "rock-paper-scissors"]
+    {
+        margin-left: 0px;
+        margin-top: 70px;
+        width: 5rem;
+    }  
+    .scoreboard
+    {
+        margin-top: 50px;
+    }
 }

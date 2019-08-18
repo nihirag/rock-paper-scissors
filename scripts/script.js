@@ -59,6 +59,10 @@ function game(playerChoice)
         let response = prompt("Game has ended if you want to play again enter y/n");
         if(response=="y")
             document.location.reload();
+        else
+        {
+            document.querySelector(".container").style.display = "none";
+        }
     }
     else
     {
